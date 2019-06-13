@@ -1,0 +1,23 @@
+﻿<Window x:Class="SzpitalGUI.AddWorkShift"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SzpitalGUI"
+        mc:Ignorable="d"
+        Title="AddWorkShift" Height="419.559" Width="633.235">
+    <Grid>
+        <ListView Margin="10,10,10,40" Name="WorkShiftListView">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Imię" Width="150" DisplayMemberBinding="{Binding FirstName}" />
+                    <GridViewColumn Header="Nazwisko" Width="150" DisplayMemberBinding="{Binding LastName}" />
+                    <GridViewColumn Header="Rola" Width="150" DisplayMemberBinding="{Binding Role}" />
+                    <GridViewColumn Header="Specjalność" Width="150" DisplayMemberBinding="{Binding Speciality}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button IsCancel="True" x:Name="Cancel" Content="Anuluj" HorizontalAlignment="Left" Margin="540,359,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Click="Ok_OnClick" IsDefault="True" x:Name="Ok" Content="OK" HorizontalAlignment="Left" Margin="427,359,0,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</Window>
